@@ -1,3 +1,10 @@
+/* Delete root when specified in main style sheet.
+Used to make color schema's and keep them in one place */
+:root {
+    --main-text-color: navy;
+    --accent-text-color: pink;
+}
+
 .page {
     display: grid;
     grid-template-columns: 20vw auto;
@@ -17,16 +24,16 @@
 }
 
 .sidebar > ul > li > a {
-    color: inherit;
+    color: var(--main-text-color);
     text-decoration: none;
     text-transform: capitalize;
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 2vw;
     line-height: 2;
 }
 
 .sidebar > ul > li > a:hover, .sidebar > ul > li > a:active {
-    color: darkslateblue;
+    color: var(--accent-text-color);
 }
 
 .main {
