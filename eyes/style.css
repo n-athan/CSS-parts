@@ -32,20 +32,15 @@ ul, li {
 
 .grid ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));~
-    grid-auto-rows: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));~
+    grid-auto-rows: 50px;
     grid-auto-flow: dense;
 }
 
 .num1 {grid-column: span 2; grid-row: span 2;}
-.num2 {  }
+.num2 { grid-row: span 3; grid-column: span 3; }
 .num3 { grid-column: span 2; grid-row: 2;}
-.num4 { grid-row: span 3; grid-column: span 3; }
-.num5 {  }
-.num6 {  }
-.num7 { grid-column: span 3; grid-row: 3; }
-.num8 { grid-row: span 2; grid-column: span 2 }
-.num9 {  }
-.num10 { grid-column: span 2; grid-row: 2; }
-.num11 {  }
-.num12 { grid-column: span 2; grid-row: 2; }
+.num4 { grid-column: span 3; grid-row: 3;  }
+.num6 { grid-row: span 2; grid-column: span 2  }
+.num7 { grid-column: span 2; grid-row: 2; }
+.num9 { grid-column: span 2; grid-row: 2; }
