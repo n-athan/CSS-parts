@@ -1,0 +1,73 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: medium;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("pizza.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin: auto;
+    background: rgba(150, 135, 115, 0.3);
+    border-bottom: rgb(250, 235, 215) solid 5px;
+    font-size: 5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: antiquewhite;
+    padding: 0 5vw;
+}
+
+main { 
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(150px, 2fr) minmax(150px, 3fr) minmax(0,1fr);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#ingredienten {
+    grid-column: 2 / span 1;
+    grid-row: 1;
+}
+
+#recept {
+    grid-column: 3 / span 1;
+    grid-row: 1;
+}
+
+h2 {
+    color: orangered;
+    font-size: 4vw;
+    text-align: left;
+    border-bottom: orangered solid 2px;
+    padding: 0 5px;
+}
+ul li {
+    list-style: none;
+}
+ul li::before {content: "•"; color: orangered;
+    display: inline-block; width: 1em;
+    margin-left: -1em}
+}
+
+ol {list-style: none; counter-reset: li;}
+
+li::before {content: counter(li); color: orangered;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
+
+  li {counter-increment: li; list-style: none}
+
+@media only screen and (max-width: 450px) {
+    li {
+        font-size: 3vw;
+    }
+    main {grid-template-columns: 0 minmax(150px, 2fr) minmax(150px, 3fr) 0;}
+    #recept {padding-right: 2vw;}
+
+}

@@ -1,46 +1,46 @@
 body {
-    background-color: blanchedalmond;
-    /* display: flex;
-    justify-content: center; */
-    margin: 4vh auto;
-    max-width: 940px;
+    background-color: rgb(12, 7, 1);
+    display: flex;
+    justify-content: center;
+    margin: 2vh auto;
+    max-width: vmin;
 }
 
-div{
-    background-color: aquamarine
-}
 img {
     display: block;
-    height: 100%;
     width: 100%;
     object-fit: cover;
-    border: 6px solid black;
+    border: 2px solid black;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
-}
-ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    min-width: 50px;
 }
 
-.grid li {
-    list-style: none;
-    /* border: solid black 15px; */
-    overflow: hidden;
-    margin: auto;
-}
-
-.grid ul {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));~
-    grid-auto-rows: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, auto));
+    grid-auto-rows: repeat(auto-fit, 1fr);
     grid-auto-flow: dense;
 }
 
-.num1 {grid-column: span 2; grid-row: span 2;}
-.num2 { grid-row: span 3; grid-column: span 3; }
-.num3 { grid-column: span 2; grid-row: 2;}
-.num4 { grid-column: span 3; grid-row: 3;  }
-.num6 { grid-row: span 2; grid-column: span 2  }
-.num7 { grid-column: span 2; grid-row: 2; }
-.num9 { grid-column: span 2; grid-row: 2; }
+.num1 { grid-column: span 3; grid-row: span 3;}
+.num2 { grid-row: span 4; grid-column: span 4; }
+.num10 { grid-column: span 2; grid-row: span 2;}
+.num4 { grid-column: span 3; grid-row: span 3;  }
+.num6 { grid-row: span 5; grid-column: span 5  }
+.num7 { grid-column: span 2; grid-row: span 2; }
+.num9 { grid-column: span 3; grid-row: span 3; }
+.num14  { grid-column: span 3; grid-row: span 3; }
+.num17  { grid-column: span 3; grid-row: span 3; }
+.num31  { grid-column: span 2; grid-row: span 2; }
+.num23  { grid-column: span 4; grid-row: span 4; }
+.num28  { grid-column: span 4; grid-row: span 4; }
+.num32  { grid-column: span 2; grid-row: span 2; }
+.num25  { grid-column: span 3; grid-row: span 3; }
+.num {grid-column: span 2; grid-row: span 2;}
+.numb2 {grid-column: span 2; grid-row: span 2;}
+
+
+
+
