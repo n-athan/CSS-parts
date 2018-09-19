@@ -2,7 +2,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;]
+    margin: auto;
+    height: 100vh;
 }
 
 main { 
@@ -50,13 +51,3 @@ main p {
     grid-row: 3;
     background-color: rgb(206, 108, 219);
 }   
-
-/* #_0 div {
-    position: relative;
-    top: -40%;
-}
-
-#_1 div {
-    position: relative;
-    top: -33%;
-} */
