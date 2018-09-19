@@ -16,10 +16,18 @@
     <script src="circletype.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
-        var rad = $(document.getElementById("_0")).width()*0.4;
-        new CircleType(document.getElementById("_0")).radius(rad);
-        var rad1 = $(document.getElementById("_1")).width()*0.33;
-        new CircleType(document.getElementById("_1")).radius(rad1);
+        var rad = 0.42;
+        var circle0 = new CircleType(document.getElementById("_0"));
+        circle0.radius($(document.getElementById("_0")).width()*rad);
+        circle0.forceHeight(false);
+        var rad1 = 0.35;
+        var circle1 = new CircleType(document.getElementById("_1"));
+        circle1.radius($(document.getElementById("_1")).width()*rad1);
+        circle1.forceHeight(false);
+        var div = document.querySelectorAll("div")[0];
+        div.style.top = -rad*100 + "%";
+        var div = document.querySelectorAll("div")[1];
+        div.style.top = -rad1*100 + "%";
     </script>
 </body>
 </html>

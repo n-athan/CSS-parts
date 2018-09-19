@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: auto;]
 }
 
 main { 
@@ -25,7 +25,13 @@ main p {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform: uppercase;
     font-size: 5vmin;
+    padding:0;
+    /* transition: 1s ease(); */
 }
+
+/* main p:hover {
+    transform: rotate(15deg);
+} */
 
 #_0 {
     grid-column: 1 / span 5;
@@ -45,12 +51,12 @@ main p {
     background-color: rgb(206, 108, 219);
 }   
 
-#_0 div {
+/* #_0 div {
     position: relative;
-    top: -33%;
+    top: -40%;
 }
 
 #_1 div {
     position: relative;
-    top: -20%;
-}
+    top: -33%;
+} */
