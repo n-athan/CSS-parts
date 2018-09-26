@@ -1,0 +1,41 @@
+body{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.block {
+    width: 23px;
+    height: 23px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center; align-items: center;
+}
+.shadow {
+    width: 80%;
+    height: 80%;
+    filter: drop-shadow(2px 3px rgba(0,0,0,0.5));
+}
+/* shadow size perct. 3.92% 5.88% */
+
+.circle {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: circle(50% at 50% 50%);
+    z-index: 100;
+    font-family: 'Comfortaa', cursive;
+    font-size: 35%;
+    color:black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-auto-flow: row;
+}

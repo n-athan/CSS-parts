@@ -24,10 +24,8 @@
         var circle1 = new CircleType(document.getElementById("_1"));
         circle1.radius($(document.getElementById("_1")).width()*rad1);
         circle1.forceHeight(false);
-        var div = document.querySelectorAll("div")[0];
-        div.style.top = -rad*100 + "%";
-        var div = document.querySelectorAll("div")[1];
-        div.style.top = -rad1*100 + "%";
+        document.querySelectorAll("div")[0].style.top = -rad*100 + "%";
+        document.querySelectorAll("div")[1].style.top = -rad1*100 + "%";
     </script>
 </body>
 </html>
