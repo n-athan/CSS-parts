@@ -37,7 +37,7 @@ canvas {
     align-items: center;
 }
 
-.pixelation, .blockswide {
+.pixelation, .brickswide, .brickshigh {
     width: 100%; /* Width of the outside container */
     display: flex;
     flex-flow: row wrap;
@@ -47,19 +47,25 @@ canvas {
     color: hsl(0, 0%, 83%);
     font-family: Ubuntu, 'Segoe UI', sans-serif;
     font-weight: 700;
+    font-size: 3vmin;
 }
 
 .pixelation {
     grid-row: 1;
 }
 
-.blockswide {
+.brickswide {
     grid-row: 2;
+}
+
+.brickshigh {
+    grid-row: 3;
 }
 
 h2 {
     text-transform: uppercase;
     margin: 2px;
+    font-size: 2.5vmin;
 }
 
 p {
@@ -84,4 +90,32 @@ p {
 /* Mouse-over effects */
 .slider:hover {
     opacity: 1; /* Fully shown on mouse-over */
+}
+
+.button {
+    grid-row: 5;
+    justify-self: center;
+    align-self: center;
+}
+
+button {
+    color:  hsl(210, 15%, 36%);
+    font-family: Ubuntu, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-size: 3vmin;
+}
+
+input[type='radio'] { 
+    transform: scale(1.33); 
+}
+
+select, .imageSelect {
+    grid-row: 4;
+    justify-self: center;
+    align-self: center;
+    background-color: hsl(0, 0%, 83%);
+    color:  hsl(210, 15%, 36%);
+    font-family: Ubuntu, 'Segoe UI', sans-serif;
+    font-weight: 500;
+    font-size: 2vmin;
 }

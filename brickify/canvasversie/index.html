@@ -11,13 +11,31 @@
     <main></main>
     <div id="controls">
         <div class="pixelation">
-            <h2>Pixelation</h2>
+            <input type="radio" name="choice" value="pixelation" checked><h2>Pixelation</h2>
             <input type="range" min="15" max="100" value="35" class="slider" id="pix"><p id="pixOutput"></p>
         </div>
-        <div class="blockswide">
-                <h2>Blocks Wide</h2>
-                <input type="range" min="15" max="200" value="50" class="slider" id="bw"><p id="bwOutput"></p>
-            </div>
+        <div class="brickswide">
+            <input type="radio" name="choice" value="brickswide"><h2>Bricks Wide</h2>
+            <input type="range" min="1" max="75" value="50" class="slider" id="bw"><p id="bwOutput"></p>
+        </div>
+        <div class="brickshigh">
+            <input type="radio" name="choice" value="brickshigh"><h2>Bricks High</h2>
+            <input type="range" min="1" max="75" value="50" class="slider" id="bh"><p id="bhOutput"></p>
+        </div>
+        <div class="imageSelect">
+            <select id="img">                
+                <option value="./img/butterfly.JPG">Butterfly</option>
+                <option value="./img/badLuckBrian.jpg">Bad Luck Brian</option>
+                <option value="./img/eifeltoren.jpg">Eifeltower</option>
+                <option value="./img/grumpyCat.jpg">Grumpy Cat</option>
+                <option value="./img/legoBlue.jpg">LEGO Spaceman</option>
+                <option value="./img/spongebobImagination.jpg">Spongebob</option>
+                <option value="./img/hogwartsCrest.png">Hogwarts</option>
+            </select>
+        </div>
+        <div class="button">
+            <button onclick="submit()">Brickify!</button>
+        </div>
     </div>
     <script type="text/javascript" src="script.js"></script>
 </body>

@@ -9,23 +9,39 @@ var bwOutput = document.getElementById("bwOutput");
 bwOutput.innerHTML = bw.value; 
 var bwValue = bw.value;
 
+var bh = document.getElementById("bh");
+var bhOutput = document.getElementById("bhOutput");
+bhOutput.innerHTML = bh.value; 
+var bhValue = bh.value;
 
 //start
-var source = 'fly.jpg';
+var choice = 'pixelation';
+var source = document.getElementById("img").value;
 var context = initContext();
 var imageObj = loadImage(context,pixValue,source);
 
 // Update the current slider value (each time you drag the slider handle)
 pix.oninput = function() {
-    pixOutput.innerHTML = this.value;
     pixValue = this.value;
-    var imageObj = loadImage(context,pixValue,source);
-} 
+    pixOutput.innerHTML = this.value;
+}
 
-// hsl values to css-hsl
-function base(h,s,l) {
-    return(`hsl(${h},${s}%,${l}%)`);
-};
+bw.oninput = function() {
+    bwValue = this.value;
+    bwOutput.innerHTML = this.value;
+}
+
+bh.oninput = function() {
+    bhValue = this.value;
+    bhOutput.innerHTML = this.value;
+}
+
+//change image on submit
+function submit() {
+    choice = document.querySelector('input[name=choice]:checked').value;
+    source  = document.getElementById("img").value;
+    loadImage(context,pixValue,source);
+}
 
 //initialize
 function initContext() {
@@ -37,10 +53,22 @@ function initContext() {
     return context;
 }; 
 
+//get pixelation value for the chosen setting. 
+function getPix(scale, imageObj){
+    if (choice === 'pixelation') {
+        return scale;
+    } else if (choice === 'brickswide') {
+        return imageObj.width / bwValue ;
+    } else {
+        return imageObj.height / bhValue ;
+    }
+}
+
 //load image
-function loadImage(context,pix,source) {
+function loadImage(context,scale,source) {
     var imageObj = new Image();
     imageObj.onload = function() {
+        var pix = getPix(scale, imageObj);
         var fw = (imageObj.width / pix)|0,
         fh = (imageObj.height / pix)|0;
         disableSmoothing(context);
@@ -51,7 +79,7 @@ function loadImage(context,pix,source) {
         brickify(imageData,fw);
     };
     imageObj.src = source;
-    return imageObj;
+    //return imageObj;
 };
 
 //to get actual square pixels
@@ -71,6 +99,11 @@ function dataToHsl(imageData) {
     colors.push(color);
     }
     return colors;
+};
+
+// hsl values to css-hsl
+function base(h,s,l) {
+    return(`hsl(${h},${s}%,${l}%)`);
 };
 
 function brickify(imageData,fw) {
