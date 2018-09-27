@@ -10,9 +10,14 @@
 <body>
     <main></main>
     <div id="controls">
-        <div class="slidecontainer">
-            <input type="range" min="1" max="60" value="35" class="slider" id="pix">
+        <div class="pixelation">
+            <h2>Pixelation</h2>
+            <input type="range" min="15" max="100" value="35" class="slider" id="pix"><p id="pixOutput"></p>
         </div>
+        <div class="blockswide">
+                <h2>Blocks Wide</h2>
+                <input type="range" min="15" max="200" value="50" class="slider" id="bw"><p id="bwOutput"></p>
+            </div>
     </div>
     <script type="text/javascript" src="script.js"></script>
 </body>

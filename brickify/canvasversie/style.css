@@ -32,17 +32,38 @@ canvas {
     background-color: hsl(210, 15%, 36%);
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(auto, minmax(min-content, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
     justify-content: center;
     align-items: center;
 }
 
-.slidecontainer {
-    grid-row: 1;
-    width: 75%; /* Width of the outside container */
-    justify-content: center;
+.pixelation, .blockswide {
+    width: 100%; /* Width of the outside container */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
     align-items: center;
     justify-self: center;
+    color: hsl(0, 0%, 83%);
+    font-family: Ubuntu, 'Segoe UI', sans-serif;
+    font-weight: 700;
+}
+
+.pixelation {
+    grid-row: 1;
+}
+
+.blockswide {
+    grid-row: 2;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin: 2px;
+}
+
+p {
+    display: inline;
 }
 
 /* The slider itself */
@@ -51,9 +72,9 @@ canvas {
     margin:0;
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    width: 100%; /* Full-width */
+    width: 75%; /* Full-width */
     height: 25px; /* Specified height */
-    background: #d3d3d3; /* Grey background */
+    background: hsl(0, 0%, 83%); /* Grey background */
     outline: none; /* Remove outline */
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */

@@ -1,19 +1,26 @@
 //input from controls
 var pix = document.getElementById("pix");
-var pixOutput = document.getElementById("demo");
-// pixValue.innerHTML = slider.value; 
+var pixOutput = document.getElementById("pixOutput");
+pixOutput.innerHTML = pix.value; 
+var pixValue = pix.value;
+
+var bw = document.getElementById("bw");
+var bwOutput = document.getElementById("bwOutput");
+bwOutput.innerHTML = bw.value; 
+var bwValue = bw.value;
+
+
+//start
+var source = 'fly.jpg';
+var context = initContext();
+var imageObj = loadImage(context,pixValue,source);
 
 // Update the current slider value (each time you drag the slider handle)
 pix.oninput = function() {
-    // pixOutput.innerHTML = this.value;
+    pixOutput.innerHTML = this.value;
     pixValue = this.value;
     var imageObj = loadImage(context,pixValue,source);
 } 
-
-var source = 'fly.jpg';
-// var pixValue = 30;
-var context = initContext();
-
 
 // hsl values to css-hsl
 function base(h,s,l) {
